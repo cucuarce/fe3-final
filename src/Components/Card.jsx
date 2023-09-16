@@ -1,10 +1,9 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import {Link} from "react-router-dom"
 import { ContextGlobal } from "./utils/global.context";
 
-const Card = ({ name, username, id, star=false }) => {
+const Card = ({ name, username, id }) => {
 
-  const [starState, setStarState] = useState(false)
   const { state, handleFavs } = useContext(ContextGlobal)
 
   const addFav = ()=>{
@@ -12,18 +11,15 @@ const Card = ({ name, username, id, star=false }) => {
     if(state.favs.some((fav) => fav.id === id)) {
       const newFavs = state.favs.filter((fav) => fav.id !== id)
       handleFavs(newFavs)
-      // setStarState(false)
       alert(`Has eliminado a ${name} de favoritos`);
     } else {
       const newFav = {
         id,
         name,
         username,
-        // star: !starState
       }
       const newArr = [...state.favs, newFav]
       handleFavs(newArr)
-      // setStarState(true)
       alert(`Has añadido a ${name} a favoritos`);
     }
 
