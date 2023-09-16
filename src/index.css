@@ -7,27 +7,67 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.main {
+  padding: 0px 0px 40px;
+  /* height: calc(100vh - 195px); */
+  height: 71.5vh;
+}
+
+.home {
+  padding: 0px 0px 40px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
-  padding: 10px;
+  /* padding: 10px; */
   border: none;
   width: 100%;
   cursor: pointer;
+  color: yellow;
+  font-size: 30px;
+}
+
+.btn-theme {
+  color: rgb(252, 252, 3);
+  font-size: 20px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.favButton:hover {
+  background-color: rgba(7, 135, 240, 0.726);
 }
 
 h1{
   text-align: center;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  /* width: 80vw; */
+  justify-content: flex-end;
   padding: 1rem;
+
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a{
@@ -42,32 +82,50 @@ a:hover{
 
 footer {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
 }
 
-footer > img{
+.dh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+}
+
+.ico {
+  width: 20px;
+  filter: brightness(1) invert(1) sepia(1) hue-rotate(180deg) saturate(0);
+  padding: 5px;
+}
+
+.img-dh {
   width: 200px;
-  margin: 0;
 }
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
-}
+
 
 form{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   width: 300px;
   height: 100px;
-  margin: 0 auto;
+  padding: 20px;
+  margin: auto;
+}
+
+.div-input {
+  padding: 5px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .card{
@@ -76,7 +134,7 @@ form{
   flex-direction: column;
   align-items: center;
   width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
 }
 
@@ -94,10 +152,14 @@ form{
   margin: 0 auto;
 }
 
+.img {
+  width: 190px;
+}
+
 table {
  border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    width: 80%;
     display: table;
     border: 1px solid #ccc;
 
@@ -119,4 +181,13 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+.dark .btn-theme {
+  background-color: #12121200;
+}
+.dark nav a {
+  color: white;
+}
+.dark nav a:hover {
+  color: black;
 }
